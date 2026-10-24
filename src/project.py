@@ -1,4 +1,3 @@
-
 # Task 1: Check if an amount can be made using the given box sizes.
 
 def can_make(n: int, a: int, b: int, c: int) -> bool:

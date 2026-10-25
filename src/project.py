@@ -61,3 +61,9 @@ def count_ways(n: int, a: int, b: int, c: int) -> int:
                     count += 1
 
     return count
+
+
+
+# Task EXTRA: Check the largest impossible amount for coprime box sizes.
+def check_largest(a: int, b: int, c: int = 1000) -> bool:
+   pass

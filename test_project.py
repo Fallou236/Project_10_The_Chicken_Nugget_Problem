@@ -43,7 +43,7 @@ def test_cannot_be_made():
 
 
 #Test 3
-"""def test_largest_impossible():
+def test_largest_impossible():
     print("\n--- TEST largest_impossible() ---")
 
     result = largest_impossible(6, 9, 20)
@@ -51,7 +51,7 @@ def test_cannot_be_made():
 
     assert result == 43
 
-    print("PASS: largest_impossible()")"""
+    print("PASS: largest_impossible()")
 
 
 """def test_count_ways():
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     test_can_make()
     test_cannot_be_made()
-    #test_largest_impossible()
+    test_largest_impossible()
     #test_count_ways()
     test_invalid_inputs()
     #test_even_box_sizes()

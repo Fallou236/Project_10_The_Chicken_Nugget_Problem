@@ -18,7 +18,18 @@ def can_make(n: int, a: int, b: int, c: int) -> bool:
 
 # Task 2: Return all amounts that cannot be made up to the given limit.
 def cannot_be_made(a: int, b: int, c: int, limit: int = 100) -> list[int]:
-    pass
+    """Return all amounts that cannot be made up to limit."""
+    if limit < 0:
+        raise ValueError("Limit must be non-negative.")
+
+    impossible = []
+
+    for n in range(limit + 1):
+        if not can_make(n, a, b, c):
+            impossible.append(n)
+
+    return impossible
+
 
 
 # Task 3: Find the largest impossible amount up to the given limit.

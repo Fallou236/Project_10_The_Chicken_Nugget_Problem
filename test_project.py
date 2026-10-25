@@ -25,7 +25,7 @@ def test_can_make():
 
 # Test 2 
 
-"""def test_cannot_be_made():
+def test_cannot_be_made():
     print("\n--- TEST cannot_be_made() ---")
 
     result = cannot_be_made(6, 9, 20)
@@ -39,7 +39,7 @@ def test_can_make():
         17, 19, 22, 23, 25, 28, 31, 34, 37, 43
     ]
 
-    print("PASS: cannot_be_made()")"""
+    print("PASS: cannot_be_made()")
 
 
 #Test 3
@@ -102,7 +102,7 @@ if __name__ == "__main__":
     print("===== CHICKEN NUGGET PROBLEM =====")
 
     test_can_make()
-    #test_cannot_be_made()
+    test_cannot_be_made()
     #test_largest_impossible()
     #test_count_ways()
     test_invalid_inputs()

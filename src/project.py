@@ -1,4 +1,5 @@
 # Task 1: Check if an amount can be made using the given box sizes.
+import math
 
 def can_make(n: int, a: int, b: int, c: int) -> bool:
     """Check whether n can be made using boxes of sizes a, b and c."""
@@ -45,3 +46,8 @@ def largest_impossible(
 # Task 4: Count the combinations that make exactly the given amount.
 def count_ways(n: int, a: int, b: int, c: int) -> int:
     pass
+
+
+# Task EXTRA: Check the largest impossible amount for coprime box sizes.
+def check_largest(a: int, b: int, c: int = 1000) -> bool:
+   pass

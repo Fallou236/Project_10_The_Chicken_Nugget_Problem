@@ -3,6 +3,7 @@ from src.project import (
     cannot_be_made,
     largest_impossible,
     count_ways,
+    check_largest,
 )
 
 
@@ -53,6 +54,16 @@ def test_largest_impossible():
 
     print("PASS: largest_impossible()")
 
+def test_invalid_inputs():
+    print("\n--- TEST des entrées invalides ---")
+
+    try:
+        can_make(10, 0, 9, 20)
+    except ValueError:
+        print("Taille nulle : ValueError correctement levée.")
+    else:
+        raise AssertionError("ValueError attendue")
+
 
 """def test_count_ways():
     print("\n--- TEST count_ways() ---")
@@ -70,19 +81,8 @@ def test_largest_impossible():
     print("PASS: count_ways()")"""
 
 
-def test_invalid_inputs():
-    print("\n--- TEST des entrées invalides ---")
-
-    try:
-        can_make(10, 0, 9, 20)
-    except ValueError:
-        print("Taille nulle : ValueError correctement levée.")
-    else:
-        raise AssertionError("ValueError attendue")
-
-
 # Think and explain: Test even box sizes (4, 6, 10).
-"""def test_even_box_sizes():
+def test_even_box_sizes():
     print("\n--- TEST EVEN BOX SIZES (4, 6, 10) ---")
 
     result = cannot_be_made(4, 6, 10)
@@ -96,7 +96,38 @@ def test_invalid_inputs():
     assert all(n % 2 != 0 for n in result)
     assert max(result) == 99
 
-    print("PASS: Even box sizes test")"""
+    print("PASS: Even box sizes test")
+
+
+# Task EXTRA: Test other box sizes (5, 8, 12).
+"""def test_other_box_sizes():
+    result = cannot_be_made(5, 8, 12)
+
+    print("\n--- TEST OTHER BOX SIZES (5, 8, 12) ---")
+    print("Amounts that cannot be made:")
+    print(result)
+    print("Largest impossible amount:", max(result))
+
+    assert max(result) == 27
+
+    print("PASS: Other box sizes")"""
+
+
+# Task EXTRA: Test the formula for coprime box sizes.
+"""def test_coprime_box_sizes():
+    pairs = [(3, 5), (4, 7), (5, 8)]
+
+    print("\n--- TEST COPRIME BOX SIZES ---")
+
+    for a, b in pairs:
+        result = check_largest(a, b)
+        print(f"check_largest({a}, {b}) = {result}")
+        assert result is True
+
+    print("PASS: Coprime box sizes")"""
+
+    
+
 
 if __name__ == "__main__":
     print("===== CHICKEN NUGGET PROBLEM =====")
@@ -107,5 +138,7 @@ if __name__ == "__main__":
     #test_count_ways()
     test_invalid_inputs()
     #test_even_box_sizes()
+    #test_other_box_sizes()
+    #test_coprime_box_sizes()
 
     print("\n===== TOUS LES TESTS SONT PASSÉS =====")

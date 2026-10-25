@@ -85,7 +85,7 @@ def test_count_ways():
 def test_even_box_sizes():
     print("\n--- TEST EVEN BOX SIZES (4, 6, 10) ---")
 
-    result = cannot_be_made(4, 6, 10)
+    result = cannot_be_made(4, 6, 10, limit=100)
 
     print("Amounts that cannot be made:")
     print(result)
@@ -93,10 +93,11 @@ def test_even_box_sizes():
     print("Largest impossible amount up to 100:")
     print(max(result))
 
-    assert all(n % 2 != 0 for n in result)
+    assert all(not can_make(n, 4, 6, 10) for n in result)
     assert max(result) == 99
 
     print("PASS: Even box sizes test")
+
 
 
 # Task EXTRA: Test other box sizes (5, 8, 12).

@@ -85,7 +85,7 @@ def test_count_ways():
 def test_even_box_sizes():
     print("\n--- TEST EVEN BOX SIZES (4, 6, 10) ---")
 
-    result = cannot_be_made(4, 6, 10, limit=100)
+    result = cannot_be_made(4, 6, 10)
 
     print("Amounts that cannot be made:")
     print(result)

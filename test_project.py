@@ -54,7 +54,7 @@ def test_largest_impossible():
     print("PASS: largest_impossible()")
 
 
-"""def test_count_ways():
+def test_count_ways():
     print("\n--- TEST count_ways() ---")
 
     cases = [
@@ -67,7 +67,7 @@ def test_largest_impossible():
         print(f"count_ways({n}, 6, 9, 20) = {result}")
         assert result == expected
 
-    print("PASS: count_ways()")"""
+    print("PASS: count_ways()")
 
 
 def test_invalid_inputs():
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     test_can_make()
     test_cannot_be_made()
     test_largest_impossible()
-    #test_count_ways()
+    test_count_ways()
     test_invalid_inputs()
     #test_even_box_sizes()
 

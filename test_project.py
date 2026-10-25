@@ -137,7 +137,7 @@ if __name__ == "__main__":
     test_largest_impossible()
     test_count_ways()
     test_invalid_inputs()
-    #test_even_box_sizes()
+    test_even_box_sizes()
     #test_other_box_sizes()
     #test_coprime_box_sizes()
 

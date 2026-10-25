@@ -45,9 +45,19 @@ def largest_impossible(
 
 # Task 4: Count the combinations that make exactly the given amount.
 def count_ways(n: int, a: int, b: int, c: int) -> int:
-    pass
+    """Count the combinations that make exactly n."""
+    if n < 0:
+        return 0
 
+    if min(a, b, c) <= 0:
+        raise ValueError("Box sizes must be positive integers.")
 
-# Task EXTRA: Check the largest impossible amount for coprime box sizes.
-def check_largest(a: int, b: int, c: int = 1000) -> bool:
-   pass
+    count = 0
+
+    for i in range(n // a + 1):
+        for j in range(n // b + 1):
+            for k in range(n // c + 1):
+                if i * a + j * b + k * c == n:
+                    count += 1
+
+    return count

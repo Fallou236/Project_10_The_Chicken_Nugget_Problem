@@ -65,7 +65,7 @@ def test_invalid_inputs():
         raise AssertionError("ValueError attendue")
 
 
-"""def test_count_ways():
+def test_count_ways():
     print("\n--- TEST count_ways() ---")
 
     cases = [
@@ -78,7 +78,7 @@ def test_invalid_inputs():
         print(f"count_ways({n}, 6, 9, 20) = {result}")
         assert result == expected
 
-    print("PASS: count_ways()")"""
+    print("PASS: count_ways()")
 
 
 # Think and explain: Test even box sizes (4, 6, 10).
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     test_can_make()
     test_cannot_be_made()
     test_largest_impossible()
-    #test_count_ways()
+    test_count_ways()
     test_invalid_inputs()
     #test_even_box_sizes()
     #test_other_box_sizes()

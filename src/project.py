@@ -30,13 +30,17 @@ def cannot_be_made(a: int, b: int, c: int, limit: int = 100) -> list[int]:
 
     return impossible
 
-
-
 # Task 3: Find the largest impossible amount up to the given limit.
 def largest_impossible(
     a: int, b: int, c: int, limit: int = 100
 ) -> int | None:
-    pass
+    """Return the largest impossible amount up to limit."""
+    impossible = cannot_be_made(a, b, c, limit)
+
+    if len(impossible) == 0:
+        return None
+
+    return max(impossible)
 
 # Task 4: Count the combinations that make exactly the given amount.
 def count_ways(n: int, a: int, b: int, c: int) -> int:

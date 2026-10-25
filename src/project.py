@@ -66,4 +66,9 @@ def count_ways(n: int, a: int, b: int, c: int) -> int:
 
 # Task EXTRA: Check the largest impossible amount for coprime box sizes.
 def check_largest(a: int, b: int, c: int = 1000) -> bool:
-   pass
+
+    """Check the formula a * b - a - b for coprime a and b."""
+    if math.gcd(a, b) != 1:
+        raise ValueError("The box sizes a and b must be coprime.")
+
+    return max(cannot_be_made(a, b, c)) == a * b - a - b

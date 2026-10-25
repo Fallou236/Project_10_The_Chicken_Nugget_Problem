@@ -101,7 +101,7 @@ def test_even_box_sizes():
 
 
 # Task EXTRA: Test other box sizes (5, 8, 12).
-"""def test_other_box_sizes():
+def test_other_box_sizes():
     result = cannot_be_made(5, 8, 12)
 
     print("\n--- TEST OTHER BOX SIZES (5, 8, 12) ---")
@@ -109,13 +109,13 @@ def test_even_box_sizes():
     print(result)
     print("Largest impossible amount:", max(result))
 
-    assert max(result) == 27
+    assert max(result) == 19
 
-    print("PASS: Other box sizes")"""
+    print("PASS: Other box sizes")
 
 
 # Task EXTRA: Test the formula for coprime box sizes.
-"""def test_coprime_box_sizes():
+def test_coprime_box_sizes():
     pairs = [(3, 5), (4, 7), (5, 8)]
 
     print("\n--- TEST COPRIME BOX SIZES ---")
@@ -125,7 +125,7 @@ def test_even_box_sizes():
         print(f"check_largest({a}, {b}) = {result}")
         assert result is True
 
-    print("PASS: Coprime box sizes")"""
+    print("PASS: Coprime box sizes")
 
     
 
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     test_count_ways()
     test_invalid_inputs()
     test_even_box_sizes()
-    #test_other_box_sizes()
-    #test_coprime_box_sizes()
+    test_other_box_sizes()
+    test_coprime_box_sizes()
 
     print("\n===== TOUS LES TESTS SONT PASSÉS =====")
